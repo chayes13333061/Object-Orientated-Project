@@ -9,7 +9,7 @@ class Cell
     @coverage = nil
   end
 
-  def assign_coverage(distance)
+  def assign_coverage_to_cell(distance)
     coverage_number = Float(1/(1 + distance))
     #puts coverage_number
     if coverage_number > 0.3

@@ -19,15 +19,17 @@ module UsefulMethods
         next
       end
     end
-    puts smallest_distance
     smallest_distance
   end
 
-  def assign_coverage(grid, base_stations)
+  def self.assign_coverage(grid, base_stations)
     grid.each_with_index do |x, xi|
       x.each_with_index do |y, yi|
-        puts "element [#{xi}, #{yi}] is #{y}"
+        y.assign_coverage_to_cell(UsefulMethods.nearest_station_distance(y, base_stations))
+        #puts "element [#{xi}, #{yi}] is #{y}"
       end
     end
   end
+
+  
 end

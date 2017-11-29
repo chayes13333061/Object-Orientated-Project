@@ -18,9 +18,11 @@ class Main
     end
   end
 
-  21.times do |i|
-    21.times do |j|
-      puts "(#{i}, #{j})"
+  grid = Array.new(21){Array.new(21)}
+
+  21.times do |x|
+    21.times do |y|
+      grid[x][y] = Cell.new(x, y)
     end
   end
 
@@ -29,6 +31,6 @@ class Main
   puts "\n"
 
   # Q2
-  #UsefulMethods.assign_coverage()
+  UsefulMethods.assign_coverage(grid, base_stations.base_stations)
 
 end
