@@ -38,11 +38,13 @@ class Main
       x_pos = data[0].to_i
       y_pos = data[1].to_i
 
-      print "#{grid.grid[x_pos][y_pos].coverage} "
+      print "#{grid.grid[x_pos][y_pos].coverage_category} "
     end
   end
 
+  puts "\n"
+
   # Q4
-  
+  puts UsefulMethods.total_coverage_quality(grid)
 
 end

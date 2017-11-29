@@ -30,4 +30,17 @@ module UsefulMethods
       end
     end
   end
+
+  def self.total_coverage_quality(grid)
+    grid_size = 0
+    total_coverage = 0
+    grid.grid.each_with_index do |x, xi|
+      x.each_with_index do |y, yi|
+        total_coverage += grid.grid[xi][yi].coverage
+        grid_size += 1
+        #puts "element [#{xi}, #{yi}] is #{y}"
+      end
+    end
+    (total_coverage/grid_size)
+  end
 end

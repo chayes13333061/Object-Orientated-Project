@@ -22,9 +22,9 @@ class Grid
   def coverage_categories
     @grid.each_with_index do |x, xi|
       x.each_with_index do |y, yi|
-        if @grid[xi][yi].coverage == :strong
+        if @grid[xi][yi].coverage_category == :strong
           @strong_coverage.push(y)
-        elsif @grid[xi][yi].coverage == :medium
+        elsif @grid[xi][yi].coverage_category == :medium
           @medium_coverage.push(y)
         else
           @weak_coverage.push(y)
