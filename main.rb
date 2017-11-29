@@ -5,7 +5,6 @@ require_relative 'useful_methods.rb'
 
 class Main
 
-  include (UsefulMethods)
   base_stations = BaseStations.new
 
   begin
@@ -19,9 +18,11 @@ class Main
     end
   end
 
+  # Q1
   puts base_stations.to_s
+  puts "\n"
 
-  cell1 = Cell.new(0, 0 )
-  cell2 = Cell.new(2, 2 )
-  puts UsefulMethods.distance(cell1, cell2)
+  # Q2
+  base_stations.assign_coverage
+
 end

@@ -5,7 +5,7 @@ module UsefulMethods
    distance = Math.sqrt((base_station_cell.x_center - grid_cell.x_center)**2 + (base_station_cell.y_center - grid_cell.y_center)**2)
   end
 
-  def self.find_nearest_station(grid_cell, base_stations)
+  def self.nearest_station_distance(grid_cell, base_stations)
     smallest_distance = 1000000000
 
     base_stations.each do |station|
@@ -13,5 +13,7 @@ module UsefulMethods
         smallest_distance = UsefulMethods.distance(station.cell, grid_cell)
       end
     end
+
+    smallest_distance
   end
 end
