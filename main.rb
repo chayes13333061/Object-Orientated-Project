@@ -21,17 +21,17 @@ class Main
 
   grid = Grid.new(21,21)
 
-  # Q1
+  puts "Q1"
   puts base_stations.to_s
   puts "\n"
 
-  # Q2
+  puts "Q2"
   UsefulMethods.assign_coverage(grid, base_stations.base_stations)
   grid.coverage_categories
   puts grid.to_s
   puts "\n"
 
-  # Q3
+  puts "Q3"
   begin
     IO.foreach('route.txt') do |line|
       data = line.split
@@ -43,8 +43,9 @@ class Main
   end
 
   puts "\n"
+  puts "\n"
 
-  # Q4
+  puts "Q4"
   puts UsefulMethods.total_coverage_quality(grid)
 
 end
