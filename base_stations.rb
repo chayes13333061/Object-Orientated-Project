@@ -14,7 +14,7 @@ class BaseStations
 
   def assign_coverage
     @base_stations.each do |station|
-      station.cell.coverage(UsefulMethods.nearest_station_distance(station.cell, @base_stations))
+      station.cell.assign_coverage(UsefulMethods.nearest_station_distance(station.cell, @base_stations))
     end
   end
 
