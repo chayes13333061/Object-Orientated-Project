@@ -41,4 +41,28 @@ module UsefulMethods
     end
     (total_coverage/grid_size)
   end
+
+  def self.best_TCQ(grid, base_stations)
+    best_comb = self.total_coverage_quality(grid)
+    best_grid = grid
+    base_stations.each do |station|
+      2.times do |i|
+        2.times do |j|
+          station.cell.x += i
+          station.cell.y += j
+          UsefulMethods.assign_coverage(grid, base_stations)
+          temp_comb = UsefulMethods.total_coverage_quality(grid)
+
+          if temp_comb > best_comb
+            best_grid = grid
+          else
+            station.cell.x -= i
+            station.cell.y -= j
+            UsefulMethods.assign_coverage(best_grid, base_stations)
+          end
+        end
+      end
+    end
+    best_grid
+  end
 end

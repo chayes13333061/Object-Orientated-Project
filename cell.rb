@@ -1,5 +1,6 @@
 class Cell
-  attr_reader :x, :y, :x_center, :y_center, :coverage, :coverage_category
+  attr_reader :x_center, :y_center, :coverage, :coverage_category
+  attr_accessor :x, :y
 
   def initialize(x_coordinate, y_coordinate)
     @x = x_coordinate
