@@ -35,11 +35,13 @@ class Grid
 
   def to_s
     str = ""
-    str += "number of cells with weak coverage: #{@weak_coverage.size}"
-    str += "number of cells with medium coverage: #{@medium_coverage.size}"
-    str += "number of cells with strong coverage: #{@strong_coverage.size}"
+    str += "number of cells with weak coverage: #{@weak_coverage.size}\n"
+    str += "number of cells with medium coverage: #{@medium_coverage.size}\n"
+    str += "number of cells with strong coverage: #{@strong_coverage.size}\n"
     str += @weak_coverage.inject(""){|str, cell| str + cell.to_s}
+    str += "\n"
     str += @medium_coverage.inject(""){|str, cell| str + cell.to_s}
+    str += "\n"
     str += @strong_coverage.inject(""){|str, cell| str + cell.to_s}
   end
 end

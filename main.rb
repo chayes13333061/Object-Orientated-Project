@@ -28,5 +28,6 @@ class Main
   # Q2
   UsefulMethods.assign_coverage(grid, base_stations.base_stations)
   grid.coverage_categories
+  puts grid.to_s
 
 end
