@@ -6,8 +6,12 @@ class BaseStation
     @cell = cell
   end
 
+  def distance(base_station_cell, grid_cell)
+    
+  end
+
   def to_s
     str = ""
-    str += "#{@name} (#{@cell.x}, #{@cell.y})"
+    str += "#{@name} (#{@cell.x},#{@cell.y}) "
   end
 end
