@@ -1,6 +1,7 @@
 require_relative 'base_stations.rb'
 require_relative 'base_station.rb'
 require_relative 'cell.rb'
+require_relative 'grid.rb'
 require_relative 'useful_methods.rb'
 
 class Main
@@ -18,13 +19,7 @@ class Main
     end
   end
 
-  grid = Array.new(21){Array.new(21)}
-
-  21.times do |x|
-    21.times do |y|
-      grid[x][y] = Cell.new(x, y)
-    end
-  end
+  grid = Grid.new(21,21)
 
   # Q1
   puts base_stations.to_s
