@@ -18,4 +18,8 @@ class Main
   end
 
   puts base_stations.to_s
+
+  cell1 = Cell.new(0, 0 )
+  cell2 = Cell.new(2, 2 )
+  puts base_stations.distance(cell1, cell2)
 end
