@@ -19,6 +19,9 @@ class Cell
     else
       @coverage = :weak
     end
+  end
 
+  def to_s
+    str = "(#{@x},#{@y})"
   end
 end

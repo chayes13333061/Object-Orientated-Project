@@ -26,14 +26,8 @@ module UsefulMethods
     grid.grid.each_with_index do |x, xi|
       x.each_with_index do |y, yi|
         y.assign_coverage_to_cell(UsefulMethods.nearest_station_distance(y, base_stations))
-        puts "element [#{xi}, #{yi}] is #{y}"
+        #puts "element [#{xi}, #{yi}] is #{y}"
       end
     end
   end
-
-  def coverage_categories(grid)
-
-  end
-
-
 end
