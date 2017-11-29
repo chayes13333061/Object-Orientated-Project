@@ -29,5 +29,20 @@ class Main
   UsefulMethods.assign_coverage(grid, base_stations.base_stations)
   grid.coverage_categories
   puts grid.to_s
+  puts "\n"
+
+  # Q3
+  begin
+    IO.foreach('route.txt') do |line|
+      data = line.split
+      x_pos = data[0].to_i
+      y_pos = data[1].to_i
+
+      print "#{grid.grid[x_pos][y_pos].coverage} "
+    end
+  end
+
+  # Q4
+  
 
 end
