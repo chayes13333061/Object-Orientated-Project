@@ -1,9 +1,11 @@
 require_relative 'base_stations.rb'
 require_relative 'base_station.rb'
 require_relative 'cell.rb'
+require_relative 'useful_methods.rb'
 
 class Main
 
+  include (UsefulMethods)
   base_stations = BaseStations.new
 
   begin
@@ -21,5 +23,5 @@ class Main
 
   cell1 = Cell.new(0, 0 )
   cell2 = Cell.new(2, 2 )
-  puts base_stations.distance(cell1, cell2)
+  puts UsefulMethods.distance(cell1, cell2)
 end
