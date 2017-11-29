@@ -18,11 +18,17 @@ class Main
     end
   end
 
+  21.times do |i|
+    21.times do |j|
+      puts "(#{i}, #{j})"
+    end
+  end
+
   # Q1
   puts base_stations.to_s
   puts "\n"
 
   # Q2
-  base_stations.assign_coverage
+  #UsefulMethods.assign_coverage()
 
 end

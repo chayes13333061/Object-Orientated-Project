@@ -19,6 +19,15 @@ module UsefulMethods
         next
       end
     end
+    puts smallest_distance
     smallest_distance
+  end
+
+  def assign_coverage(grid, base_stations)
+    grid.each_with_index do |x, xi|
+      x.each_with_index do |y, yi|
+        puts "element [#{xi}, #{yi}] is #{y}"
+      end
+    end
   end
 end

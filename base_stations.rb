@@ -12,12 +12,6 @@ class BaseStations
     @base_stations.push(base_station)
   end
 
-  def assign_coverage
-    @base_stations.each do |station|
-      station.cell.assign_coverage(UsefulMethods.nearest_station_distance(station.cell, @base_stations))
-    end
-  end
-
   def to_s
     str = @base_stations.inject(""){|str, station| str + station.to_s}
   end
