@@ -55,6 +55,7 @@ module UsefulMethods
 
           if temp_comb > best_comb
             best_grid = grid
+            best_grid.coverage_categories
           else
             station.cell.x -= i
             station.cell.y -= j

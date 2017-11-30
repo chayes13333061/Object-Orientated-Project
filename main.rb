@@ -48,5 +48,6 @@ class Main
   puts "Q4"
   best_grid = UsefulMethods.best_TCQ(grid, base_stations.base_stations)
   puts UsefulMethods.total_coverage_quality(best_grid)
+  puts best_grid.to_s
 
 end
